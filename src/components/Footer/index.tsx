@@ -3,24 +3,24 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer
-      className="wow fadeInUp relative z-10 bg-[#090E34] pt-20 lg:pt-[100px]"
-      data-wow-delay=".15s"
-    >
+     <footer
+       className="wow fadeInUp relative z-10 bg-white pt-20 lg:pt-[100px]"
+       data-wow-delay=".15s"
+     >
       <div className="container">
         <div className="-mx-4 flex flex-wrap">
           <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-4/12 xl:w-3/12">
             <div className="mb-10 w-full">
               <Link href="/" className="mb-6 inline-block max-w-[160px]">
-                <Image
-                  src="/images/logo/1sapien-white-text.png"
-                  alt="logo"
-                  width={140}
-                  height={30}
-                  className="max-w-full"
-                />
+                 <Image
+                   src="/images/logo/1sapien-black-text.png"
+                   alt="logo"
+                   width={140}
+                   height={30}
+                   className="max-w-full"
+                 />
               </Link>
-              <p className="mb-8 max-w-[270px] text-base text-gray-7">
+              <p className="mb-8 max-w-[270px] text-base text-gray-800">
                 We build beautiful, high-performing websites that help
                 businesses grow and succeed online.
               </p>
@@ -28,7 +28,7 @@ const Footer = () => {
                 <Link
                   aria-label="social link"
                   href="#"
-                  className="px-3 text-gray-7 hover:text-white"
+                   className="px-3 text-gray-600 hover:text-primary"
                 >
                   <svg
                     width="22"
@@ -44,7 +44,7 @@ const Footer = () => {
                 <Link
                   aria-label="social link"
                   href="#"
-                  className="px-3 text-gray-7 hover:text-white"
+                   className="px-3 text-gray-600 hover:text-primary"
                 >
                   <svg
                     width="22"
@@ -60,7 +60,7 @@ const Footer = () => {
                 <Link
                   aria-label="social link"
                   href="#"
-                  className="px-3 text-gray-7 hover:text-white"
+                   className="px-3 text-gray-600 hover:text-primary"
                 >
                   <svg
                     width="22"
@@ -78,7 +78,7 @@ const Footer = () => {
                 <Link
                   aria-label="social link"
                   href="#"
-                  className="px-3 text-gray-7 hover:text-white"
+                   className="px-3 text-gray-600 hover:text-primary"
                 >
                   <svg
                     width="22"
@@ -96,14 +96,14 @@ const Footer = () => {
           </div>
           <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-2/12 xl:w-2/12">
             <div className="mb-10 w-full">
-              <h4 className="mb-9 text-lg font-semibold text-white">
-                Quick Links
-              </h4>
+               <h4 className="mb-9 text-lg font-semibold text-gray-800">
+                 Quick Links
+               </h4>
               <ul>
                 <li>
                   <Link
                     href="/"
-                    className="mb-3 inline-block text-base text-gray-7 hover:text-primary"
+                    className="mb-3 inline-block text-base text-gray-600 hover:text-primary"
                   >
                     Home
                   </Link>
@@ -111,7 +111,7 @@ const Footer = () => {
                 <li>
                   <Link
                     href="/products"
-                    className="mb-3 inline-block text-base text-gray-7 hover:text-primary"
+                    className="mb-3 inline-block text-base text-gray-600 hover:text-primary"
                   >
                     Products
                   </Link>
@@ -119,7 +119,7 @@ const Footer = () => {
                 <li>
                   <Link
                     href="/about"
-                    className="mb-3 inline-block text-base text-gray-7 hover:text-primary"
+                    className="mb-3 inline-block text-base text-gray-600 hover:text-primary"
                   >
                     About
                   </Link>
@@ -127,7 +127,7 @@ const Footer = () => {
                 <li>
                   <Link
                     href="/our-work"
-                    className="mb-3 inline-block text-base text-gray-7 hover:text-primary"
+                    className="mb-3 inline-block text-base text-gray-600 hover:text-primary"
                   >
                     Our Work
                   </Link>
@@ -137,14 +137,14 @@ const Footer = () => {
           </div>
            <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-3/12 xl:w-2/12">
              <div className="mb-10 w-full">
-               <h4 className="mb-9 text-lg font-semibold text-white">
-                 Resources
-               </h4>
+                <h4 className="mb-9 text-lg font-semibold text-gray-800">
+                  Resources
+                </h4>
                <ul>
                  <li>
                    <Link
                      href="/blogs"
-                     className="mb-3 inline-block text-base text-gray-7 hover:text-primary"
+                     className="mb-3 inline-block text-base text-gray-600 hover:text-primary"
                    >
                      Blog
                    </Link>
@@ -152,7 +152,7 @@ const Footer = () => {
                  <li>
                    <Link
                      href="/pricing"
-                     className="mb-3 inline-block text-base text-gray-7 hover:text-primary"
+                     className="mb-3 inline-block text-base text-gray-600 hover:text-primary"
                    >
                      Pricing
                    </Link>
@@ -160,7 +160,7 @@ const Footer = () => {
                  <li>
                    <Link
                      href="/our-work"
-                     className="mb-3 inline-block text-base text-gray-7 hover:text-primary"
+                     className="mb-3 inline-block text-base text-gray-600 hover:text-primary"
                    >
                      Our Work
                    </Link>
@@ -168,7 +168,7 @@ const Footer = () => {
                  <li>
                    <Link
                      href="/partners"
-                     className="mb-3 inline-block text-base text-gray-7 hover:text-primary"
+                     className="mb-3 inline-block text-base text-gray-600 hover:text-primary"
                    >
                      Partners
                    </Link>
@@ -178,14 +178,14 @@ const Footer = () => {
            </div>
            <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-3/12 xl:w-2/12">
              <div className="mb-10 w-full">
-               <h4 className="mb-9 text-lg font-semibold text-white">
-                 Legal
-               </h4>
+                <h4 className="mb-9 text-lg font-semibold text-gray-800">
+                  Legal
+                </h4>
                <ul>
                  <li>
                    <Link
                      href="/privacy"
-                     className="mb-3 inline-block text-base text-gray-7 hover:text-primary"
+                     className="mb-3 inline-block text-base text-gray-600 hover:text-primary"
                    >
                      Privacy Policy
                    </Link>
@@ -193,7 +193,7 @@ const Footer = () => {
                  <li>
                    <Link
                      href="/terms"
-                     className="mb-3 inline-block text-base text-gray-7 hover:text-primary"
+                     className="mb-3 inline-block text-base text-gray-600 hover:text-primary"
                    >
                      Terms of Service
                    </Link>
@@ -203,10 +203,10 @@ const Footer = () => {
            </div>
            <div className="w-full px-4 md:w-2/3 lg:w-6/12 xl:w-3/12">
              <div className="mb-10 w-full">
-               <h4 className="mb-9 text-lg font-semibold text-white">
-                 Want to learn more about how we can help?
-               </h4>
-               <p className="mb-6 text-base text-gray-7">
+                <h4 className="mb-9 text-lg font-semibold text-gray-800">
+                  Want to learn more about how we can help?
+                </h4>
+               <p className="mb-6 text-base text-gray-800">
                  Book a free call with our team and discover how 1Sapien can grow your business online.
                </p>
                <Link
@@ -220,22 +220,22 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="mt-12 border-t border-[#8890A4]/40 py-8 lg:mt-[60px]">
+       <div className="mt-12 border-t border-gray-200 py-8 lg:mt-[60px]">
         <div className="container">
           <div className="-mx-4 flex flex-wrap">
             <div className="w-full px-4 md:w-2/3 lg:w-1/2">
               <div className="my-1">
                 <div className="-mx-3 flex items-center justify-center md:justify-start">
-                  <Link
-                    href="/privacy"
-                    className="px-3 text-base text-gray-7 hover:text-white hover:underline"
-                  >
+                 <Link
+                     href="/privacy"
+                     className="px-3 text-base text-gray-600 hover:text-gray-900 hover:underline"
+                   >
                     Privacy Policy
                   </Link>
-                  <Link
-                    href="/terms"
-                    className="px-3 text-base text-gray-7 hover:text-white hover:underline"
-                  >
+                   <Link
+                     href="/terms"
+                     className="px-3 text-base text-gray-600 hover:text-gray-900 hover:underline"
+                   >
                     Terms of Service
                   </Link>
                 </div>
@@ -243,12 +243,12 @@ const Footer = () => {
             </div>
             <div className="w-full px-4 md:w-1/3 lg:w-1/2">
               <div className="my-1 flex justify-center md:justify-end">
-                <p className="text-base text-gray-7">
-                  Designed and Developed by{" "}
-                  <Link
-                    href="/"
-                    className="text-gray-1 hover:underline"
-                  >
+                 <p className="text-base text-gray-600">
+                   Designed and Developed by{" "}
+                   <Link
+                     href="/"
+                     className="text-gray-800 hover:underline"
+                   >
                     1Sapien
                   </Link>
                 </p>
