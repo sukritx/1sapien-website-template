@@ -211,7 +211,7 @@ const Footer = () => {
                </p>
                <Link
                  href="/contact"
-                 className="inline-flex items-center justify-center rounded-lg bg-primary px-7 py-3 text-base font-medium text-white transition hover:bg-primary/90"
+                 className="inline-flex items-center justify-center rounded-lg bg-primary px-7 py-3 text-base font-bold text-white transition hover:bg-primary/90"
                >
                  Book a Call
                </Link>
@@ -246,7 +246,7 @@ const Footer = () => {
                  <p className="text-base text-gray-600">
                    Designed and Developed by{" "}
                    <Link
-                     href="/"
+                     href="https://1sapien.com"
                      className="text-gray-800 hover:underline"
                    >
                     1Sapien

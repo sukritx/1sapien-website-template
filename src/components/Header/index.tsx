@@ -148,7 +148,7 @@ const Header = () => {
                     <Link
                       href="/contact"
                       onClick={navbarToggleHandler}
-                      className="rounded-lg bg-primary px-6 py-3 text-center text-base font-medium text-white duration-300 ease-in-out hover:bg-primary/90"
+                      className="rounded-lg bg-primary px-6 py-3 text-center text-base font-bold text-white duration-300 ease-in-out hover:bg-primary/90"
                     >
                       Book a Call
                     </Link>
@@ -164,7 +164,7 @@ const Header = () => {
                 </Link>
                 <Link
                   href="/contact"
-                  className="rounded-lg bg-primary px-6 py-3 text-base font-medium text-white duration-300 ease-in-out hover:bg-primary/90"
+                  className="rounded-lg bg-primary px-6 py-3 text-base font-bold text-white duration-300 ease-in-out hover:bg-primary/90"
                 >
                   Book a Call
                 </Link>

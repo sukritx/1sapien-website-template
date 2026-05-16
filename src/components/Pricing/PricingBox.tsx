@@ -44,7 +44,7 @@ const PricingBox = ({ product }: { product: Price }) => {
         <div className="w-full text-center">
           <Link
             href="/contact"
-            className="block w-full rounded-md bg-primary py-4 text-center text-xl font-semibold text-white transition duration-300 hover:bg-primary/90"
+            className="block w-full rounded-md bg-primary py-4 text-center text-xl font-bold text-white transition duration-300 hover:bg-primary/90"
           >
             Book a Call
           </Link>
