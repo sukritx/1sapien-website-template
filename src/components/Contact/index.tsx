@@ -81,19 +81,35 @@ const Contact = () => {
                 Request a Free Estimate
               </h3>
               <form>
-                <div className="mb-[22px]">
-                  <label
-                    htmlFor="fullName"
-                    className="mb-4 block text-sm text-body-color dark:text-dark-6"
-                  >
-                    Full Name*
-                  </label>
-                  <input
-                    type="text"
-                    name="fullName"
-                    placeholder="John Smith"
-                    className="w-full border-0 border-b border-[#f1f1f1] bg-transparent pb-3 text-dark placeholder:text-body-color/60 focus:border-primary focus:outline-none dark:border-dark-3 dark:text-white"
-                  />
+                <div className="mb-[22px] flex gap-4">
+                  <div className="w-1/2">
+                    <label
+                      htmlFor="firstName"
+                      className="mb-4 block text-sm text-body-color dark:text-dark-6"
+                    >
+                      First Name*
+                    </label>
+                    <input
+                      type="text"
+                      name="firstName"
+                      placeholder="John"
+                      className="w-full border-0 border-b border-[#f1f1f1] bg-transparent pb-3 text-dark placeholder:text-body-color/60 focus:border-primary focus:outline-none dark:border-dark-3 dark:text-white"
+                    />
+                  </div>
+                  <div className="w-1/2">
+                    <label
+                      htmlFor="lastName"
+                      className="mb-4 block text-sm text-body-color dark:text-dark-6"
+                    >
+                      Last Name*
+                    </label>
+                    <input
+                      type="text"
+                      name="lastName"
+                      placeholder="Smith"
+                      className="w-full border-0 border-b border-[#f1f1f1] bg-transparent pb-3 text-dark placeholder:text-body-color/60 focus:border-primary focus:outline-none dark:border-dark-3 dark:text-white"
+                    />
+                  </div>
                 </div>
                 <div className="mb-[22px]">
                   <label
@@ -141,9 +157,9 @@ const Contact = () => {
                 <div className="mb-0">
                   <button
                     type="submit"
-                    className="inline-flex items-center justify-center rounded-md bg-primary px-10 py-3 text-base font-bold text-white transition duration-300 ease-in-out hover:bg-primary/90"
+                    className="inline-flex w-full items-center justify-center rounded-md bg-primary px-10 py-3 text-base font-bold text-white transition duration-300 ease-in-out hover:bg-primary/90"
                   >
-                    Request Free Estimate
+                    Send
                   </button>
                 </div>
               </form>
