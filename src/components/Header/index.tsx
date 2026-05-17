@@ -45,9 +45,14 @@ const Header = () => {
           <div className="relative -mx-4 flex items-center justify-between">
             <div className="w-60 max-w-full px-4">
               <Link href="/" className="navbar-logo block w-full py-5">
-                <span className={`block w-full py-5 text-xl font-bold text-dark ${pathUrl !== "/" ? "text-lg" : ""}`}>
-                  A-1 Total Service Plumbing
-                </span>
+                <Image
+                  src="/images/brands/a1logo.png"
+                  alt="A-1 Total Service Plumbing"
+                  width={200}
+                  height={60}
+                  className="h-auto w-full max-w-[200px]"
+                  priority
+                />
               </Link>
             </div>
             <div className="flex w-full items-center justify-between px-4">
