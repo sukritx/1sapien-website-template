@@ -5,8 +5,8 @@ import SingleTeam from "./SingleTeam";
 const teamData: TeamType[] = [
   {
     id: 1,
-    name: "Adveen Desuza",
-    designation: "UI Designer",
+    name: "Master Plumber",
+    designation: "Lead Technician",
     image: "/images/team/team-01.png",
     facebookLink: "/#",
     twitterLink: "/#",
@@ -14,8 +14,8 @@ const teamData: TeamType[] = [
   },
   {
     id: 2,
-    name: "Jezmin uniya",
-    designation: "Product Designer",
+    name: "Senior Plumber",
+    designation: "Trenchless Specialist",
     image: "/images/team/team-02.png",
     facebookLink: "/#",
     twitterLink: "/#",
@@ -23,8 +23,8 @@ const teamData: TeamType[] = [
   },
   {
     id: 3,
-    name: "Andrieo Gloree",
-    designation: "App Developer",
+    name: "Field Supervisor",
+    designation: "Commercial Division",
     image: "/images/team/team-03.png",
     facebookLink: "/#",
     twitterLink: "/#",
@@ -32,8 +32,8 @@ const teamData: TeamType[] = [
   },
   {
     id: 4,
-    name: "Jackie Sanders",
-    designation: "Content Writer",
+    name: "Service Coordinator",
+    designation: "Customer Support",
     image: "/images/team/team-04.png",
     facebookLink: "/#",
     twitterLink: "/#",
@@ -51,8 +51,8 @@ const Team = () => {
         <div className="mb-[60px]">
           <SectionTitle
             subtitle="Our Team"
-            title="Meet Our Team"
-            paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
+            title="Experienced Plumbing Professionals"
+            paragraph="Our team of licensed plumbers, trenchless specialists, and support staff are dedicated to providing the highest quality plumbing services in Southern California."
             width="640px"
             center
           />
@@ -62,6 +62,15 @@ const Team = () => {
           {teamData.map((team, i) => (
             <SingleTeam key={i} team={team} />
           ))}
+        </div>
+
+        <div className="mt-12 text-center">
+          <p className="text-lg text-body-color dark:text-dark-6">
+            We&apos;re hiring! Looking for plumbers, installers, dispatchers, and office staff.{" "}
+            <a href="mailto:a1totalserviceplumbing@gmail.com" className="font-semibold text-primary hover:underline">
+              Contact us to apply
+            </a>
+          </p>
         </div>
       </div>
     </section>

@@ -1,8 +1,9 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | 1Sapien",
-  description: "Privacy Policy for 1Sapien Company - learn how we collect, use, and protect your personal data.",
+  title: "Privacy Policy | A-1 Total Service Plumbing",
+  description:
+    "Privacy Policy for A-1 Total Service Plumbing - learn how we collect, use, and protect your personal data.",
 };
 
 const PrivacyPage = () => {
@@ -16,12 +17,12 @@ const PrivacyPage = () => {
 
           <div className="prose prose-lg max-w-none dark:prose-invert text-body-color dark:text-dark-6 space-y-8">
             <p>
-              This Privacy Policy describes Our policies and procedures on the collection, use, and disclosure of Your information when You respond to our advertisements and tells You about Your privacy rights and how the law protects You. We use Your Personal Data to contact and support you, as well as to provide and improve the Service. By using the Service, You agree to the collection and use of information in accordance with this Privacy Policy.
+              This Privacy Policy describes Our policies and procedures on the collection, use, and disclosure of Your information when You contact our business or use our website. We use Your Personal Data to provide plumbing services, contact you regarding service requests, and improve our Service. By using the Service, You agree to the collection and use of information in accordance with this Privacy Policy.
             </p>
 
             <h2 className="text-2xl font-bold text-dark dark:text-white">Mobile Communication Policy</h2>
             <p>
-              We value your privacy and are committed to protecting your personal information. When you provide your mobile number, you consent to receive SMS messages related to our services. Your mobile opt-in will <strong>not</strong> be shared with third parties for marketing purposes.
+              We value your privacy and are committed to protecting your personal information. When you provide your mobile number, you consent to receive SMS messages related to our plumbing services, appointment confirmations, and service updates. Your mobile opt-in will <strong>not</strong> be shared with third parties for marketing purposes.
             </p>
             <p>
               <strong>Opt-Out Instructions:</strong> You can opt out of receiving SMS messages at any time by replying <strong>STOP</strong> to any message you receive from us.
@@ -32,16 +33,11 @@ const PrivacyPage = () => {
 
             <h2 className="text-2xl font-bold text-dark dark:text-white">Interpretation and Definitions</h2>
 
-            <h3 className="text-xl font-bold text-dark dark:text-white">Interpretation</h3>
-            <p>
-              The words of which the initial letter is capitalized have meanings defined under the following conditions. The following definitions shall have the same meaning regardless of whether they appear in singular or in plural.
-            </p>
-
             <h3 className="text-xl font-bold text-dark dark:text-white">Definitions</h3>
             <p>For the purposes of this Privacy Policy:</p>
             <ul className="list-disc pl-6 space-y-2">
               <li>
-                <strong>Company</strong> (referred to as either &quot;the Company&quot;, &quot;We&quot;, &quot;Us&quot; or &quot;Our&quot; in this Agreement) refers to 1Sapien Company.
+                <strong>Company</strong> (referred to as either &quot;the Company&quot;, &quot;We&quot;, &quot;Us&quot; or &quot;Our&quot; in this Agreement) refers to A-1 Total Service Plumbing, CA License #1135475.
               </li>
               <li>
                 <strong>Device</strong> means any device that can access the Service such as a computer, a cellphone, or a digital tablet.
@@ -50,7 +46,7 @@ const PrivacyPage = () => {
                 <strong>Personal Data</strong> is any information that relates to an identified or identifiable individual.
               </li>
               <li>
-                <strong>Service</strong> refers to the advertisement, website, or application.
+                <strong>Service</strong> refers to the website or plumbing services provided.
               </li>
             </ul>
 
@@ -58,22 +54,22 @@ const PrivacyPage = () => {
 
             <h3 className="text-xl font-bold text-dark dark:text-white">Types of Data Collected</h3>
             <p>
-              While using Our Service, We may ask You to provide Us with certain personally identifiable information that can be used to contact or identify You. Personally identifiable information may include, but is not limited to:
+              When you contact us for plumbing services, We may ask You to provide Us with certain personally identifiable information that can be used to contact or identify You. Personally identifiable information may include, but is not limited to:
             </p>
             <ul className="list-disc pl-6 space-y-2">
               <li>First and last name</li>
               <li>Email address</li>
               <li>Phone number</li>
-              <li>Location details such as your address, city, or country</li>
-              <li>Any other data such as personal preferences, requirements, or comments</li>
+              <li>Service address / Location details</li>
+              <li>Description of plumbing issue</li>
             </ul>
 
             <h3 className="text-xl font-bold text-dark dark:text-white">Use of Your Personal Data</h3>
             <p>The Company may use Personal Data for the following purposes:</p>
             <ul className="list-disc pl-6 space-y-2">
-              <li>To provide and maintain our Service, including monitoring usage.</li>
-              <li>To contact You via email, phone, or SMS about updates, features, or support.</li>
-              <li>To manage Your requests and respond to inquiries.</li>
+              <li>To provide and schedule plumbing services.</li>
+              <li>To contact You via email, phone, or SMS about appointments, estimates, or service updates.</li>
+              <li>To manage Your service requests and respond to inquiries.</li>
               <li>For legal compliance and security purposes.</li>
             </ul>
 
@@ -86,18 +82,16 @@ const PrivacyPage = () => {
             <p>
               We may update Our Privacy Policy from time to time. We will notify You of any changes by posting the new Privacy Policy on this page.
             </p>
-            <p>
-              You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page.
-            </p>
-            <p>
-              This Privacy Policy was last updated on 2024/04/03
-            </p>
 
             <h2 className="text-2xl font-bold text-dark dark:text-white">Contact Us</h2>
             <p>
-              If you have any questions about this Privacy Policy, You can contact us via email at{" "}
-              <a href="mailto:1sapiencompany@gmail.com" className="text-primary hover:underline">
-                1sapiencompany@gmail.com
+              If you have any questions about this Privacy Policy, You can contact us at{" "}
+              <a href="tel:3234102068" className="text-primary hover:underline">
+                (323) 410-2068
+              </a>{" "}
+              or via email at{" "}
+              <a href="mailto:a1totalserviceplumbing@gmail.com" className="text-primary hover:underline">
+                a1totalserviceplumbing@gmail.com
               </a>
             </p>
           </div>

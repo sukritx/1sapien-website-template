@@ -3,15 +3,15 @@ import Contact from "@/components/Contact";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title:
-    "Contact Page | Play SaaS Starter Kit and Boilerplate for Next.js",
-  description: "This is contact page description",
+  title: "Contact Us | A-1 Total Service Plumbing - Free Estimates",
+  description:
+    "Contact A-1 Total Service Plumbing for a free estimate. Available 24/7 for emergency plumbing in Los Angeles and Orange County. Call (323) 410-2068 or fill out our online form.",
 };
 
 const ContactPage = () => {
   return (
     <>
-      <Breadcrumb pageName="Contact Page" />
+      <Breadcrumb pageName="Contact Us" pageDescription="Get in touch with A-1 Total Service Plumbing for a free estimate or 24/7 emergency service." />
 
       <Contact />
     </>

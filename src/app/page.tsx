@@ -1,5 +1,4 @@
 import HomeBlogSection from "@/components/Blog/HomeBlogSection";
-import Clients from "@/components/Clients";
 import CallToAction from "@/components/CallToAction";
 import Faq from "@/components/Faq";
 import Features from "@/components/Features";
@@ -7,12 +6,23 @@ import Hero from "@/components/Hero";
 import Process from "@/components/Process";
 import Testimonials from "@/components/Testimonials";
 import { getAllPosts } from "@/utils/markdown";
-import { homePartnersData } from "@/components/Clients/homePartnersData";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "1Sapien - We Build Websites That Drive Results",
-  description: "1Sapien is a web design and development company that builds beautiful, high-performing websites to help businesses grow and succeed online.",
+  title: "A-1 Total Service Plumbing | Licensed Plumber in Los Angeles & Orange County",
+  description:
+    "A-1 Total Service Plumbing provides licensed, bonded, and insured plumbing services across Los Angeles County and Orange County. 24/7 emergency plumbing, drain cleaning, hydro jetting, trenchless pipe relining, water heater installation, and more. Call (323) 410-2068.",
+  keywords:
+    "plumber Los Angeles, plumber Orange County, drain cleaning, hydro jetting, leak detection, sewer line repair, trenchless pipe relining, repiping, water heater installation, emergency plumber, A-1 Total Service Plumbing",
+  openGraph: {
+    title: "A-1 Total Service Plumbing | Licensed Plumber in Los Angeles & Orange County",
+    description:
+      "Licensed, bonded, and insured plumbing services across LA and OC. 24/7 emergency plumbing. Call (323) 410-2068.",
+    type: "website",
+    locale: "en_US",
+    url: "https://a1totalserviceplumbing.com",
+    siteName: "A-1 Total Service Plumbing",
+  },
 };
 
 export default function Home() {
@@ -21,7 +31,6 @@ export default function Home() {
   return (
     <main>
       <Hero />
-      <Clients partnersData={homePartnersData} />
       <Features />
       <Process />
       <Testimonials />

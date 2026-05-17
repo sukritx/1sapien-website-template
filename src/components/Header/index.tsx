@@ -45,13 +45,9 @@ const Header = () => {
           <div className="relative -mx-4 flex items-center justify-between">
             <div className="w-60 max-w-full px-4">
               <Link href="/" className="navbar-logo block w-full py-5">
-                <Image
-                  src="/images/logo/1sapien-black-text.png"
-                  alt="logo"
-                  width={pathUrl !== "/" ? 240 : 140}
-                  height={30}
-                  className="header-logo w-full"
-                />
+                <span className={`block w-full py-5 text-xl font-bold text-dark ${pathUrl !== "/" ? "text-lg" : ""}`}>
+                  A-1 Total Service Plumbing
+                </span>
               </Link>
             </div>
             <div className="flex w-full items-center justify-between px-4">
@@ -139,34 +135,34 @@ const Header = () => {
                     )}
                   </ul>
                   <div className="mt-4 flex flex-col gap-3 border-t border-stroke pt-4 lg:hidden">
-                    <Link
-                      href="https://app.1sapien.com"
+                    <a
+                      href="tel:3234102068"
                       className="px-4 py-3 text-center text-base font-medium text-dark hover:opacity-70"
                     >
-                      Sign In
-                    </Link>
+                      (323) 410-2068
+                    </a>
                     <Link
                       href="/contact"
                       onClick={navbarToggleHandler}
                       className="rounded-lg bg-primary px-6 py-3 text-center text-base font-bold text-white duration-300 ease-in-out hover:bg-primary/90"
                     >
-                      Book a Call
+                      Get a Free Estimate
                     </Link>
                   </div>
                 </nav>
               </div>
               <div className="hidden items-center justify-end pr-16 sm:flex lg:pr-0">
-                <Link
-                  href="https://app.1sapien.com"
+                <a
+                  href="tel:3234102068"
                   className="px-7 py-3 text-base font-medium text-dark hover:opacity-70"
                 >
-                  Sign In
-                </Link>
+                  (323) 410-2068
+                </a>
                 <Link
                   href="/contact"
                   className="rounded-lg bg-primary px-6 py-3 text-base font-bold text-white duration-300 ease-in-out hover:bg-primary/90"
                 >
-                  Book a Call
+                  Get a Free Estimate
                 </Link>
               </div>
             </div>

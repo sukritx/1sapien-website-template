@@ -4,9 +4,9 @@ import { getAllPosts } from "@/utils/markdown";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title:
-    "1Sapien Blog - Latest Articles on helping small businesses generate more revenue",
-  description: "Discover the latest insights, tips, and strategies for helping small businesses generate more revenue on the 1Sapien Blog. Stay updated with our expert articles and success stories to boost your business growth.",
+  title: "Plumbing Tips & Advice Blog | A-1 Total Service Plumbing",
+  description:
+    "Expert plumbing tips, maintenance advice, and industry insights from A-1 Total Service Plumbing. Learn about drain care, water heaters, trenchless repair, and more for your Los Angeles or Orange County home.",
 };
 
 const Blog = () => {

@@ -10,30 +10,36 @@ const PricingBox = ({ product }: { product: Price }) => {
         className="relative z-10 mb-10 overflow-hidden rounded-xl bg-white px-8 py-10 shadow-[0px_0px_40px_0px_rgba(0,0,0,0.08)] dark:bg-dark-2 sm:p-12 lg:px-6 lg:py-10 xl:p-14"
         data-wow-delay=".1s"
       >
-        {product.nickname === "Premium" && (
-          <p className="absolute right-[-50px] top-[60px] inline-block -rotate-90 rounded-bl-md rounded-tl-md bg-primary px-5 py-2 text-base font-medium text-white">
-            Recommended
-          </p>
-        )}
         <span className="mb-5 block text-2xl font-semibold text-dark dark:text-white">
           {product.nickname}
         </span>
         <h2 className="mb-11 text-5xl font-bold text-dark dark:text-white xl:text-[56px] xl:leading-[1.21]">
-          <span className="text-2xl font-semibold">$ </span>
-          <span className="-ml-1 -tracking-[2px]">
-            {(product.unit_amount / 100).toLocaleString("en-US", {
-              currency: "USD",
-            })}
-          </span>
-          <span className="text-lg font-medium text-body-color dark:text-dark-6">
-            {" "}
-            /mo
-          </span>
+          {product.unit_amount > 0 ? (
+            <>
+              <span className="text-2xl font-semibold">$ </span>
+              <span className="-ml-1 -tracking-[2px]">
+                {(product.unit_amount / 100).toLocaleString("en-US", {
+                  currency: "USD",
+                })}
+              </span>
+              <span className="text-lg font-medium text-body-color dark:text-dark-6">
+                {" "}
+                /mo
+              </span>
+            </>
+          ) : (
+            <>
+              <span className="text-2xl font-semibold">Free</span>
+              <span className="ml-2 text-xl font-medium text-body-color dark:text-dark-6">
+                Estimates
+              </span>
+            </>
+          )}
         </h2>
 
         <div className="mb-[50px]">
           <h3 className="mb-5 text-xl font-semibold text-dark dark:text-white">
-            Features
+            Includes
           </h3>
           <div className="mb-10">
             {product?.offers.map((offer, i) => (
@@ -46,7 +52,7 @@ const PricingBox = ({ product }: { product: Price }) => {
             href="/contact"
             className="block w-full rounded-md bg-primary py-4 text-center text-xl font-bold text-white transition duration-300 hover:bg-primary/90"
           >
-            Book a Call
+            Request Free Estimate
           </Link>
         </div>
       </div>

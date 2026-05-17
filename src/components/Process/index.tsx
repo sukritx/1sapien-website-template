@@ -1,24 +1,24 @@
 const steps = [
   {
     number: "01",
-    title: "Demo Call",
-    subtitle: "20 mins",
+    title: "Call or Request Online",
+    subtitle: "We respond fast",
     description:
-      "It's actually a sales call, we just didn't want to scare you. But seriously... we'll answer all your questions, show you any features you have questions about, and show you live client accounts & results.",
+      "Call us at (323) 410-2068 or fill out our online form. We'll gather the details about your plumbing issue and schedule a visit at a time that works for you — including same-day emergency service.",
   },
   {
     number: "02",
-    title: "We Build Your System",
-    subtitle: "7-10 days",
+    title: "Inspection & Diagnosis",
+    subtitle: "Upfront pricing",
     description:
-      "Fill out a basic onboarding form with your business details. After we have the correct information, we'll get to work on building your new website & marketing system.",
+      "Our licensed technician will inspect the issue — using advanced tools like sewer cameras and leak detection equipment when needed. You'll receive a clear explanation of the problem and an upfront quote before any work begins.",
   },
   {
     number: "03",
-    title: "Launch Call",
-    subtitle: "25 mins",
+    title: "Expert Repair & Cleanup",
+    subtitle: "Quality guaranteed",
     description:
-      "We'll walk you through your new website & marketing system, answer any questions you have, and show you how \"everything\" works... And by everything, we're really just talking about pressing two buttons.",
+      "We complete the repair efficiently using professional-grade materials and proven techniques. Whether it's a simple fix or a full trenchless pipe relining, we clean up after ourselves and make sure everything works perfectly before we leave.",
   },
 ];
 
@@ -28,7 +28,7 @@ const Process = () => {
       <div className="container">
         <div className="wow fadeInUp mx-auto mb-16 max-w-[700px] text-center" data-wow-delay=".1s">
           <h2 className="mb-3 text-3xl font-bold text-dark dark:text-white sm:text-4xl md:text-[40px] md:leading-[1.2]">
-            What working with us looks like...
+            How Our Plumbing Service Works
           </h2>
         </div>
 

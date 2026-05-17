@@ -9,17 +9,25 @@ const CallToAction = () => {
             <div className="w-full px-4">
               <div className="mx-auto max-w-[570px] text-center">
                 <h2 className="mb-2.5 text-3xl font-bold text-white md:text-[38px] md:leading-[1.44]">
-                  <span>Want to schedule a time to talk?</span>
+                  <span>Need a Plumber? We&apos;re Available 24/7!</span>
                 </h2>
                 <p className="mx-auto mb-6 max-w-[515px] text-base leading-[1.5] text-white">
-                  See everything we do to help you grow your business so you can implement it yourself or let us do it for you.
+                  From emergency repairs to scheduled maintenance, A-1 Total Service Plumbing is here for all your plumbing needs across Los Angeles and Orange County.
                 </p>
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center justify-center rounded-md bg-white px-7 py-3 text-base font-bold text-dark shadow-1 transition duration-300 ease-in-out hover:bg-gray-2"
-                >
-                  Book a Call
-                </Link>
+                <div className="flex flex-wrap items-center justify-center gap-4">
+                  <a
+                    href="tel:3234102068"
+                    className="inline-flex items-center justify-center rounded-md bg-white px-7 py-3 text-base font-bold text-dark shadow-1 transition duration-300 ease-in-out hover:bg-gray-2"
+                  >
+                    Call (323) 410-2068
+                  </a>
+                  <Link
+                    href="/contact"
+                    className="inline-flex items-center justify-center rounded-md border border-white px-7 py-3 text-base font-bold text-white transition duration-300 ease-in-out hover:bg-white/10"
+                  >
+                    Get a Free Estimate
+                  </Link>
+                </div>
               </div>
             </div>
           </div>

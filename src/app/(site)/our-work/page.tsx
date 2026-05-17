@@ -4,45 +4,46 @@ import CallToAction from "@/components/CallToAction";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Our Work - 1Sapien",
-  description: "Explore our portfolio of websites and digital experiences we've built for our clients.",
+  title: "Service Areas | A-1 Total Service Plumbing - Los Angeles & Orange County",
+  description:
+    "A-1 Total Service Plumbing serves Los Angeles County, Orange County, South Bay, East LA, Anaheim, La Habra, and beyond. Nationwide trenchless pipe relining support available.",
 };
 
 const projects = [
   {
-    title: "E-Commerce Platform",
-    category: "Web Development",
-    description: "A modern e-commerce platform with seamless checkout experience and responsive design.",
+    title: "Trenchless Sewer Relining",
+    category: "Residential",
+    description: "Rehabilitated 150ft of 6\" clay sewer line in a Los Angeles residential neighborhood without excavation, saving the homeowner's mature landscaping and driveway.",
     image: "/images/hero/hero-image.jpg",
   },
   {
-    title: "SaaS Dashboard",
-    category: "Web Application",
-    description: "An intuitive analytics dashboard with real-time data visualization and reporting tools.",
+    title: "Commercial Hydro Jetting",
+    category: "Commercial",
+    description: "Complete hydro jetting of a restaurant's grease trap and drain lines in Orange County, restoring full flow and passing health inspection.",
     image: "/images/hero/hero-image.jpg",
   },
   {
-    title: "Corporate Website",
-    category: "Web Design",
-    description: "A professional corporate website showcasing brand identity and business services.",
+    title: "Municipal Sewer Repair",
+    category: "Municipal",
+    description: "CIPP lining of 500ft of 24\" municipal sewer main under a busy street, completed with zero traffic disruption using trenchless technology.",
     image: "/images/hero/hero-image.jpg",
   },
   {
-    title: "Portfolio Platform",
-    category: "Web Development",
-    description: "A creative portfolio platform enabling artists to showcase their work beautifully.",
+    title: "Whole-Home Repiping",
+    category: "Residential",
+    description: "Complete repiping of a 1960s home in Anaheim, replacing galvanized steel with copper and PEX. Restored water pressure and eliminated discolored water.",
     image: "/images/hero/hero-image.jpg",
   },
   {
-    title: "Restaurant Booking App",
-    category: "Web Application",
-    description: "A reservation system with real-time availability and integrated payment processing.",
+    title: "Emergency Burst Pipe Repair",
+    category: "Emergency",
+    description: "2 AM emergency call for a burst pipe in Commerce. Our team arrived within 45 minutes, stopped the flooding, and completed the repair the same night.",
     image: "/images/hero/hero-image.jpg",
   },
   {
-    title: "Marketing Landing Page",
-    category: "Web Design",
-    description: "A high-converting landing page designed for maximum engagement and lead generation.",
+    title: "Water Heater Replacement",
+    category: "Residential",
+    description: "Upgraded an old 40-gallon tank water heater to an energy-efficient tankless system for a family in La Habra, reducing their energy bills by 30%.",
     image: "/images/hero/hero-image.jpg",
   },
 ];
@@ -56,11 +57,10 @@ const OurWork = () => {
             <div className="w-full px-4">
               <div className="mx-auto max-w-[780px] text-center">
                 <h1 className="mb-6 text-3xl font-bold leading-snug text-white sm:text-4xl sm:leading-snug lg:text-5xl lg:leading-[1.2]">
-                  Our Work
+                  Our Recent Projects
                 </h1>
                 <p className="mx-auto mb-9 max-w-[600px] text-base font-medium text-white sm:text-lg sm:leading-[1.44]">
-                  Explore our portfolio of projects that showcase our expertise
-                  in web design, development, and digital strategy.
+                  Real plumbing projects completed by A-1 Total Service Plumbing across Los Angeles and Orange County. See the quality of our work firsthand.
                 </p>
               </div>
             </div>
@@ -77,7 +77,7 @@ const OurWork = () => {
                   <div className="mb-6 overflow-hidden rounded-lg">
                     <Image
                       src={project.image}
-                      alt={project.title}
+                      alt={`A-1 Total Service Plumbing - ${project.title}`}
                       width={370}
                       height={240}
                       className="w-full transition duration-300 ease-in-out group-hover:scale-110"

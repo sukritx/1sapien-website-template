@@ -11,8 +11,8 @@ const Contact = () => {
                 <span className="mb-6 block text-base font-medium text-dark dark:text-white">
                   CONTACT US
                 </span>
-                <h2 className="max-w-[260px] text-[35px] font-semibold leading-[1.14] text-dark dark:text-white">
-                  Let&#39;s talk about your problem.
+                <h2 className="max-w-[360px] text-[35px] font-semibold leading-[1.14] text-dark dark:text-white">
+                  Need a Plumber? We&apos;re Here 24/7.
                 </h2>
               </div>
               <div className="mb-12 flex flex-wrap justify-between lg:mb-0">
@@ -30,10 +30,13 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="mb-[18px] text-lg font-semibold text-dark dark:text-white">
-                      Our Location
+                      Our Locations
                     </h3>
                     <p className="text-base text-body-color dark:text-dark-6">
-                      401 Broadway, 24th Floor, Orchard Cloud View, London
+                      <strong>LA County Office:</strong> Serving Commerce, Vernon, Monterey Park, Montebello &amp; surrounding areas
+                    </p>
+                    <p className="mt-2 text-base text-body-color dark:text-dark-6">
+                      <strong>Orange County Office:</strong> Anaheim &amp; La Habra areas
                     </p>
                   </div>
                 </div>
@@ -50,13 +53,19 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="mb-[18px] text-lg font-semibold text-dark dark:text-white">
-                      How Can We Help?
+                      Contact Us Anytime
                     </h3>
                     <p className="text-base text-body-color dark:text-dark-6">
-                      info@yourdomain.com
+                      <a href="tel:3234102068" className="hover:text-primary">(323) 410-2068</a>
                     </p>
                     <p className="mt-1 text-base text-body-color dark:text-dark-6">
-                      contact@yourdomain.com
+                      <a href="mailto:a1totalserviceplumbing@gmail.com" className="hover:text-primary">a1totalserviceplumbing@gmail.com</a>
+                    </p>
+                    <p className="mt-2 text-base text-body-color dark:text-dark-6">
+                      Mon–Sun: 6:00 AM – 7:00 PM
+                    </p>
+                    <p className="text-base font-semibold text-primary">
+                      Emergency: 24/7
                     </p>
                   </div>
                 </div>
@@ -66,11 +75,10 @@ const Contact = () => {
           <div className="w-full px-4 lg:w-5/12 xl:w-4/12">
             <div
               className="wow fadeInUp rounded-lg bg-white px-8 py-10 shadow-testimonial dark:bg-dark-2 dark:shadow-none sm:px-10 sm:py-12 md:p-[60px] lg:p-10 lg:px-10 lg:py-12 2xl:p-[60px]"
-              data-wow-delay=".2s
-              "
+              data-wow-delay=".2s"
             >
               <h3 className="mb-8 text-2xl font-semibold text-dark dark:text-white md:text-[28px] md:leading-[1.42]">
-                Send us a Message
+                Request a Free Estimate
               </h3>
               <form>
                 <div className="mb-[22px]">
@@ -83,21 +91,7 @@ const Contact = () => {
                   <input
                     type="text"
                     name="fullName"
-                    placeholder="Adam Gelius"
-                    className="w-full border-0 border-b border-[#f1f1f1] bg-transparent pb-3 text-dark placeholder:text-body-color/60 focus:border-primary focus:outline-none dark:border-dark-3 dark:text-white"
-                  />
-                </div>
-                <div className="mb-[22px]">
-                  <label
-                    htmlFor="email"
-                    className="mb-4 block text-sm text-body-color dark:text-dark-6"
-                  >
-                    Email*
-                  </label>
-                  <input
-                    type="email"
-                    name="email"
-                    placeholder="example@yourmail.com"
+                    placeholder="John Smith"
                     className="w-full border-0 border-b border-[#f1f1f1] bg-transparent pb-3 text-dark placeholder:text-body-color/60 focus:border-primary focus:outline-none dark:border-dark-3 dark:text-white"
                   />
                 </div>
@@ -109,23 +103,62 @@ const Contact = () => {
                     Phone*
                   </label>
                   <input
-                    type="text"
+                    type="tel"
                     name="phone"
-                    placeholder="+885 1254 5211 552"
+                    placeholder="(323) 555-1234"
                     className="w-full border-0 border-b border-[#f1f1f1] bg-transparent pb-3 text-dark placeholder:text-body-color/60 focus:border-primary focus:outline-none dark:border-dark-3 dark:text-white"
                   />
+                </div>
+                <div className="mb-[22px]">
+                  <label
+                    htmlFor="email"
+                    className="mb-4 block text-sm text-body-color dark:text-dark-6"
+                  >
+                    Email
+                  </label>
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="john@example.com"
+                    className="w-full border-0 border-b border-[#f1f1f1] bg-transparent pb-3 text-dark placeholder:text-body-color/60 focus:border-primary focus:outline-none dark:border-dark-3 dark:text-white"
+                  />
+                </div>
+                <div className="mb-[22px]">
+                  <label
+                    htmlFor="service"
+                    className="mb-4 block text-sm text-body-color dark:text-dark-6"
+                  >
+                    Service Needed
+                  </label>
+                  <select
+                    name="service"
+                    className="w-full border-0 border-b border-[#f1f1f1] bg-transparent pb-3 text-dark focus:border-primary focus:outline-none dark:border-dark-3 dark:text-white dark:bg-dark-2"
+                  >
+                    <option value="">Select a service...</option>
+                    <option value="drain-cleaning">Drain Cleaning</option>
+                    <option value="hydro-jetting">Hydro Jetting</option>
+                    <option value="leak-detection">Leak Detection</option>
+                    <option value="sewer-line-repair">Sewer Line Repair</option>
+                    <option value="repiping">Repiping</option>
+                    <option value="water-heater">Water Heater Service</option>
+                    <option value="trenchless">Trenchless Pipe Relining</option>
+                    <option value="camera-inspection">Sewer Camera Inspection</option>
+                    <option value="gas-line">Gas Line Service</option>
+                    <option value="emergency">Emergency Plumbing</option>
+                    <option value="other">Other</option>
+                  </select>
                 </div>
                 <div className="mb-[30px]">
                   <label
                     htmlFor="message"
                     className="mb-4 block text-sm text-body-color dark:text-dark-6"
                   >
-                    Message*
+                    Describe Your Issue*
                   </label>
                   <textarea
                     name="message"
-                    rows={1}
-                    placeholder="type your message here"
+                    rows={3}
+                    placeholder="Tell us about your plumbing issue..."
                     className="w-full resize-none border-0 border-b border-[#f1f1f1] bg-transparent pb-3 text-dark placeholder:text-body-color/60 focus:border-primary focus:outline-none dark:border-dark-3 dark:text-white"
                   ></textarea>
                 </div>
@@ -134,7 +167,7 @@ const Contact = () => {
                     type="submit"
                     className="inline-flex items-center justify-center rounded-md bg-primary px-10 py-3 text-base font-bold text-white transition duration-300 ease-in-out hover:bg-primary/90"
                   >
-                    Send
+                    Request Free Estimate
                   </button>
                 </div>
               </form>

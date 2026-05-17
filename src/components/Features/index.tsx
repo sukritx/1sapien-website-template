@@ -7,10 +7,10 @@ const Features = () => {
       <div className="container">
         <div className="wow fadeInUp mx-auto mb-12 max-w-[700px] text-center lg:mb-20" data-wow-delay=".1s">
           <h2 className="mb-3 text-3xl font-bold leading-tight text-dark dark:text-white sm:text-4xl md:text-[48px] md:leading-[1.15]">
-            Simple systems that actually work
+            Professional Plumbing Services You Can Trust
           </h2>
           <p className="text-lg font-medium text-body-color dark:text-dark-6 sm:text-xl">
-            No degrees required, just a hard hat
+            Licensed, bonded &amp; insured — serving Southern California since 2004
           </p>
         </div>
 

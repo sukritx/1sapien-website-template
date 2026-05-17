@@ -4,34 +4,44 @@ import { useState } from "react";
 
 const faqData = [
   {
-    question: "When am I going to start seeing results?",
+    question: "Do you offer 24/7 emergency plumbing service?",
     answer:
-      "This will completely depend on what else you're doing for advertising, how long you've been in business, the quality of your work, and of course that you commit to using our system. If you think you're going to close your eyes and pay us $297/month to solve all your problems, we're probably not the right fit for you. We cannot stress this enough... you have to be doing multiple forms of advertising. 1Sapien is meant to provide you a simple, yet extremely effective foundational marketing system to help grow and expand your business. We're here to build your online business foundation, not perform miracles.",
+      "Yes! We provide 24/7 emergency plumbing service throughout Los Angeles County and Orange County. Whether it's a burst pipe, sewer backup, gas leak, or any other plumbing emergency, our team is ready to respond day or night. Call us at (323) 410-2068 anytime.",
   },
   {
-    question: "Explain how you help me grow my business",
+    question: "What is trenchless pipe relining?",
     answer:
-      "Sure...\n\n1. Do you believe having more 5 star reviews will attract more customers?\n\n2. Do you believe that being able to be found online and having a professional website that actually works will help you convert more leads into paying customers?\n\n3. Do you believe that instantly following up with incoming leads will make you look more professional, therefore leading to more business?\n\n4. Do you believe making sure you're making the most of every customer you work with by putting them into automated re-marketing campaigns will make them more likely to work with you again?\n\n5. Do you believe offering discounts for friends of your past customers will increase the number of referrals you get?\n\n6. Do you believe using automation and AI could free you from repeating the same basic tasks in your business, therefore giving you more time for other things?\n\n7. Do you believe having these systems in place is important to grow your business?\n\nIf you believe any of those things can grow your business, that's exactly what we can help you with.",
+      "Trenchless pipe relining (also called CIPP — Cured-In-Place Pipe lining) is a method of rehabilitating damaged underground pipes without the need for extensive excavation. We insert a resin-saturated liner into the existing pipe, which cures to form a new pipe within the old one. This method works for pipes from 2\"–48\" in diameter and saves significant time, cost, and damage to your property compared to traditional dig-and-replace methods.",
   },
   {
-    question: "Why is your pricing so cheap?",
+    question: "Are you licensed and insured?",
     answer:
-      "Our only interest is keeping you for 10+ years. We believe the best way to do that is to be priced affordably. We believe if we don't overcharge and provide you with excellent service, you'll never have a reason to leave.",
+      "Absolutely. A-1 Total Service Plumbing is fully licensed (California State License #1135475), bonded, and insured. This protects both our team and our customers, giving you complete peace of mind when we work on your property.",
   },
   {
-    question: "What happens if I decide to cancel my membership?",
+    question: "What areas do you serve?",
     answer:
-      "We'll be extremely sad to see you go, but after a good cry we'll bounce back. However, you will lose access to all the features we set up for you.",
+      "We primarily serve Los Angeles County and Orange County, including Commerce, Vernon, Monterey Park, Montebello, Anaheim, La Habra, South Bay, and East Los Angeles. For trenchless pipe relining projects, we also offer nationwide support for industrial and municipal applications.",
   },
   {
-    question: "Can people find my website on Google?",
+    question: "How much does a plumbing service call cost?",
     answer:
-      "We make sure every 1Sapien website is set up for Google with the best SEO practices. This includes keyword research, adding alt tags, meta tags, and header titles, securing an SSL certificate, optimizing for a high Google Speed test score, and providing regular updates. Your Google ranking will depend on how long your site's been live, local competition, and factors like your Google My Business reviews. We also offer blogging to boost your content. While we don't handle off-page backlinks beyond your social media, our ongoing updates keep your site in great shape — unlike some developers who set up your site and then forget about it.",
+      "Our pricing varies depending on the service needed. We offer free estimates for most services and always provide upfront pricing before any work begins — no hidden fees or surprise charges. We also offer financing options and military discounts to help make quality plumbing service accessible.",
   },
   {
-    question: "Why should I spend on a website when word of mouth is already pulling in business?",
+    question: "How quickly can you respond to a service call?",
     answer:
-      "We might be a bit biased, but here's the deal: if each of your customers brings in about $500 a year, getting just 2-4 new customers from your website will pay off. We know you'll see great value from your site. It will help you attract new customers, make it easier for existing customers to refer you, allow you to run ads if you want, and attract bigger clients who value professionalism.",
+      "We pride ourselves on fast response times. For emergency calls, we typically have a technician at your location within 1–2 hours. For scheduled appointments, we offer flexible scheduling including early morning and evening time slots. Our regular business hours are 6:00 AM – 7:00 PM, 7 days a week.",
+  },
+  {
+    question: "Do you offer warranties on your work?",
+    answer:
+      "Yes, we stand behind the quality of our workmanship. We offer warranties on our plumbing services and installations. The specific warranty terms depend on the type of service performed. Our team will always explain the warranty coverage before starting any work.",
+  },
+  {
+    question: "What is hydro jetting and when is it needed?",
+    answer:
+      "Hydro jetting uses high-pressure water streams (up to 4,000 PSI) to clear severe blockages, tree roots, grease buildup, and mineral deposits from pipes. It's typically needed when traditional drain snaking isn't sufficient, or as preventative maintenance for commercial properties and older plumbing systems. It's safe for most pipe types and environmentally friendly since it uses only water.",
   },
 ];
 
@@ -95,10 +105,10 @@ const Faq = () => {
       <div className="container">
         <div className="wow fadeInUp mx-auto mb-12 max-w-[640px] text-center lg:mb-20" data-wow-delay=".1s">
           <h2 className="mb-3 text-3xl font-bold text-dark dark:text-white sm:text-4xl md:text-[40px] md:leading-[1.2]">
-            Any Questions? Answered
+            Frequently Asked Questions
           </h2>
           <p className="text-base leading-relaxed text-body-color dark:text-dark-6">
-            Got questions? We&apos;ve got answers. If you don&apos;t see yours here, just reach out.
+            Common questions about our plumbing services. Don&apos;t see yours? Call us at <a href="tel:3234102068" className="text-primary hover:underline">(323) 410-2068</a>.
           </p>
         </div>
 
