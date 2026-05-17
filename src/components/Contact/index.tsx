@@ -123,31 +123,7 @@ const Contact = () => {
                     className="w-full border-0 border-b border-[#f1f1f1] bg-transparent pb-3 text-dark placeholder:text-body-color/60 focus:border-primary focus:outline-none dark:border-dark-3 dark:text-white"
                   />
                 </div>
-                <div className="mb-[22px]">
-                  <label
-                    htmlFor="service"
-                    className="mb-4 block text-sm text-body-color dark:text-dark-6"
-                  >
-                    Service Needed
-                  </label>
-                  <select
-                    name="service"
-                    className="w-full border-0 border-b border-[#f1f1f1] bg-transparent pb-3 text-dark focus:border-primary focus:outline-none dark:border-dark-3 dark:text-white dark:bg-dark-2"
-                  >
-                    <option value="">Select a service...</option>
-                    <option value="drain-cleaning">Drain Cleaning</option>
-                    <option value="hydro-jetting">Hydro Jetting</option>
-                    <option value="leak-detection">Leak Detection</option>
-                    <option value="sewer-line-repair">Sewer Line Repair</option>
-                    <option value="repiping">Repiping</option>
-                    <option value="water-heater">Water Heater Service</option>
-                    <option value="trenchless">Trenchless Pipe Relining</option>
-                    <option value="camera-inspection">Sewer Camera Inspection</option>
-                    <option value="gas-line">Gas Line Service</option>
-                    <option value="emergency">Emergency Plumbing</option>
-                    <option value="other">Other</option>
-                  </select>
-                </div>
+
                 <div className="mb-[30px]">
                   <label
                     htmlFor="message"
