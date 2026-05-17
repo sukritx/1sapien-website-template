@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 
 const Hero = () => {
@@ -26,7 +25,7 @@ const Hero = () => {
                   <div className="mt-4 sm:mt-0 sm:absolute sm:inset-y-0 sm:right-0 sm:flex sm:items-center sm:pr-2">
                     <Link
                       href="/contact"
-                      className="inline-flex px-6 py-3 text-lg font-bold text-white transition-all duration-200 bg-gray-900 rounded-lg focus:outline-none focus:bg-gray-600 hover:bg-gray-600"
+                      className="inline-flex px-6 py-3 text-lg font-bold text-white transition-all duration-200 bg-primary rounded-lg focus:outline-none focus:bg-primary/80 hover:bg-primary/80"
                     >
                       Get Free Estimate
                     </Link>
@@ -37,14 +36,91 @@ const Hero = () => {
           </div>
 
           <div>
-            <Image
-              src="/images/hero/hero-image.jpg"
-              alt="A-1 Total Service Plumbing - Professional plumbing services in Los Angeles and Orange County"
-              width={845}
-              height={600}
-              className="w-full rounded-xl"
-              priority
-            />
+            <div className="rounded-xl bg-white p-8 shadow-lg sm:p-10">
+              <h3 className="mb-6 text-2xl font-semibold text-gray-900">
+                Request a Free Estimate
+              </h3>
+              <form>
+                <div className="mb-5 flex gap-4">
+                  <div className="w-1/2">
+                    <label
+                      htmlFor="firstName"
+                      className="mb-2 block text-sm text-gray-600"
+                    >
+                      First Name*
+                    </label>
+                    <input
+                      type="text"
+                      name="firstName"
+                      placeholder="John"
+                      className="w-full border-b border-gray-300 bg-transparent pb-2 text-gray-900 placeholder:text-gray-400 focus:border-gray-900 focus:outline-none"
+                    />
+                  </div>
+                  <div className="w-1/2">
+                    <label
+                      htmlFor="lastName"
+                      className="mb-2 block text-sm text-gray-600"
+                    >
+                      Last Name*
+                    </label>
+                    <input
+                      type="text"
+                      name="lastName"
+                      placeholder="Smith"
+                      className="w-full border-b border-gray-300 bg-transparent pb-2 text-gray-900 placeholder:text-gray-400 focus:border-gray-900 focus:outline-none"
+                    />
+                  </div>
+                </div>
+                <div className="mb-5">
+                  <label
+                    htmlFor="phone"
+                    className="mb-2 block text-sm text-gray-600"
+                  >
+                    Phone*
+                  </label>
+                  <input
+                    type="tel"
+                    name="phone"
+                    placeholder="(323) 555-1234"
+                    className="w-full border-b border-gray-300 bg-transparent pb-2 text-gray-900 placeholder:text-gray-400 focus:border-gray-900 focus:outline-none"
+                  />
+                </div>
+                <div className="mb-5">
+                  <label
+                    htmlFor="email"
+                    className="mb-2 block text-sm text-gray-600"
+                  >
+                    Email
+                  </label>
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="john@example.com"
+                    className="w-full border-b border-gray-300 bg-transparent pb-2 text-gray-900 placeholder:text-gray-400 focus:border-gray-900 focus:outline-none"
+                  />
+                </div>
+                <div className="mb-6">
+                  <label
+                    htmlFor="message"
+                    className="mb-2 block text-sm text-gray-600"
+                  >
+                    Describe Your Issue*
+                  </label>
+                  <textarea
+                    name="message"
+                    rows={3}
+                    placeholder="Tell us about your plumbing issue..."
+                    className="w-full resize-none border-b border-gray-300 bg-transparent pb-2 text-gray-900 placeholder:text-gray-400 focus:border-gray-900 focus:outline-none"
+                  ></textarea>
+                </div>
+                <button
+                  type="submit"
+                    className="w-full rounded-lg bg-primary px-6 py-3 text-base font-bold text-white transition duration-300 ease-in-out hover:bg-primary/80"
+                >
+                  Send
+                </button>
+              </form>
+            </div>
           </div>
         </div>
       </div>
