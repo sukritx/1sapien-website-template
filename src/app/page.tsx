@@ -8,6 +8,7 @@ import GoogleReviews from "@/components/GoogleReviews";
 import Hero from "@/components/Hero";
 import OurServices from "@/components/OurServices";
 import Process from "@/components/Process";
+import ServiceAreas from "@/components/ServiceAreas";
 import Testimonials from "@/components/Testimonials";
 import { getAllPosts } from "@/utils/markdown";
 import { Metadata } from "next";
@@ -40,6 +41,7 @@ export default function Home() {
       <OurServices />
       <GoogleReviews />
       <Faq />
+      <ServiceAreas />
       <CallToAction />
     </main>
   );
