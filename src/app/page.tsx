@@ -5,6 +5,7 @@ import CallToAction from "@/components/CallToAction";
 import Faq from "@/components/Faq";
 import Features from "@/components/Features";
 import Hero from "@/components/Hero";
+import OurServices from "@/components/OurServices";
 import Process from "@/components/Process";
 import Testimonials from "@/components/Testimonials";
 import { getAllPosts } from "@/utils/markdown";
@@ -35,6 +36,7 @@ export default function Home() {
       <Hero />
       <Badges />
       <AboutUs />
+      <OurServices />
       <Features />
       <Process />
       <Testimonials />
