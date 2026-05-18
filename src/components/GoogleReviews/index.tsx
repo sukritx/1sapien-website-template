@@ -65,6 +65,15 @@ const GoogleReviews = () => {
           </h2>
         </div>
 
+        <div className="mb-10 text-center">
+          <Link
+            href="/review"
+            className="inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-primary/90"
+          >
+            Leave a Review
+          </Link>
+        </div>
+
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {reviews.map((review, i) => (
             <div
