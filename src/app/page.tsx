@@ -7,6 +7,7 @@ import Features from "@/components/Features";
 import GoogleReviews from "@/components/GoogleReviews";
 import Hero from "@/components/Hero";
 import OurServices from "@/components/OurServices";
+import OurWork from "@/components/OurWork";
 import Process from "@/components/Process";
 import ServiceAreas from "@/components/ServiceAreas";
 import Testimonials from "@/components/Testimonials";
@@ -39,6 +40,7 @@ export default function Home() {
       <Badges />
       <AboutUs />
       <OurServices />
+      <OurWork />
       <GoogleReviews />
       <Faq />
       <ServiceAreas />
