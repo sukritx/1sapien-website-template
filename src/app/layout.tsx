@@ -1,8 +1,3 @@
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
-import ScrollToTop from "@/components/ScrollToTop";
-import ContactWidget from "@/components/Contact/ContactWidget";
-import ScrollUp from "@/components/Common/ScrollUp";
 import "../styles/index.css";
 import "../styles/prism-vsc-dark-plus.css";
 import Providers from "./providers";
@@ -99,14 +94,7 @@ export default function RootLayout({
       <body suppressHydrationWarning>
         <Providers>
           <div className="isolate">
-            <Header />
-
             {children}
-
-            <Footer />
-            <ContactWidget />
-            <ScrollToTop />
-            <ScrollUp />
           </div>
         </Providers>
       </body>

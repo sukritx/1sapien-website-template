@@ -1,20 +1,17 @@
 import { NextRequest, NextResponse } from "next/server";
 
 export async function POST(request: NextRequest) {
+  const webhookUrl = process.env.BAD_REVIEW_WEBHOOK_URL;
+
+  if (!webhookUrl) {
+    return NextResponse.json(
+      { error: "Bad review webhook URL not configured" },
+      { status: 500 }
+    );
+  }
+
   try {
     const body = await request.json();
-    const mood = body.mood || "";
-    const isGood = mood === "happy";
-    const webhookUrl = isGood
-      ? process.env.GOOD_REVIEW_WEBHOOK_URL
-      : process.env.BAD_REVIEW_WEBHOOK_URL;
-
-    if (!webhookUrl) {
-      return NextResponse.json(
-        { error: `${isGood ? "Good" : "Bad"} review webhook URL not configured` },
-        { status: 500 }
-      );
-    }
 
     const response = await fetch(webhookUrl, {
       method: "POST",
