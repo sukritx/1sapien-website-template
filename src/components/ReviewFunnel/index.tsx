@@ -177,7 +177,7 @@ const HappyReview = ({ onBack }: { onBack: () => void }) => {
         We&apos;re so glad you had a great experience!
       </h3>
       <p className="mb-4 text-gray-600">
-        {redirecting ? "Redirecting you to Google Reviews..." : "Something went wrong. Please try again."}
+        {redirecting ? "Redirecting..." : "Something went wrong. Please try again."}
       </p>
       {!redirecting && (
         <button
