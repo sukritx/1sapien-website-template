@@ -1,3 +1,5 @@
+import AboutUs from "@/components/AboutUs";
+import Badges from "@/components/Badges";
 import HomeBlogSection from "@/components/Blog/HomeBlogSection";
 import CallToAction from "@/components/CallToAction";
 import Faq from "@/components/Faq";
@@ -31,6 +33,8 @@ export default function Home() {
   return (
     <main>
       <Hero />
+      <Badges />
+      <AboutUs />
       <Features />
       <Process />
       <Testimonials />
