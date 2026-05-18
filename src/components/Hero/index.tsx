@@ -1,6 +1,34 @@
+"use client";
+
+import { useState, FormEvent } from "react";
 import Link from "next/link";
+import submitContactForm from "@/utils/submitContactForm";
 
 const Hero = () => {
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setStatus("loading");
+    const form = e.currentTarget;
+    const data = {
+      firstName: (form.firstName as HTMLInputElement).value,
+      lastName: (form.lastName as HTMLInputElement).value,
+      phone: (form.phone as HTMLInputElement).value,
+      email: (form.email as HTMLInputElement).value,
+      message: (form.message as HTMLTextAreaElement).value,
+      source: "hero",
+    };
+
+    try {
+      await submitContactForm(data);
+      setStatus("success");
+      form.reset();
+    } catch {
+      setStatus("error");
+    }
+  };
+
   return (
     <section id="home" className="bg-gray-50 pt-44 pb-12 sm:pt-48 sm:pb-16 lg:pt-52">
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
@@ -40,86 +68,107 @@ const Hero = () => {
               <h3 className="mb-6 text-2xl font-semibold text-gray-900">
                 Request a Free Estimate
               </h3>
-              <form>
-                <div className="mb-5 flex gap-4">
-                  <div className="w-1/2">
+              {status === "success" ? (
+                <p className="text-center text-lg font-medium text-green-600">
+                  Thank you! We&apos;ll be in touch soon.
+                </p>
+              ) : (
+                <form onSubmit={handleSubmit}>
+                  <div className="mb-5 flex gap-4">
+                    <div className="w-1/2">
+                      <label
+                        htmlFor="hero-firstName"
+                        className="mb-2 block text-sm text-gray-600"
+                      >
+                        First Name*
+                      </label>
+                      <input
+                        type="text"
+                        name="firstName"
+                        id="hero-firstName"
+                        placeholder="John"
+                        required
+                        className="w-full border-b border-gray-300 bg-transparent pb-2 text-gray-900 placeholder:text-gray-400 focus:border-gray-900 focus:outline-none"
+                      />
+                    </div>
+                    <div className="w-1/2">
+                      <label
+                        htmlFor="hero-lastName"
+                        className="mb-2 block text-sm text-gray-600"
+                      >
+                        Last Name*
+                      </label>
+                      <input
+                        type="text"
+                        name="lastName"
+                        id="hero-lastName"
+                        placeholder="Smith"
+                        required
+                        className="w-full border-b border-gray-300 bg-transparent pb-2 text-gray-900 placeholder:text-gray-400 focus:border-gray-900 focus:outline-none"
+                      />
+                    </div>
+                  </div>
+                  <div className="mb-5">
                     <label
-                      htmlFor="firstName"
+                      htmlFor="hero-phone"
                       className="mb-2 block text-sm text-gray-600"
                     >
-                      First Name*
+                      Phone*
                     </label>
                     <input
-                      type="text"
-                      name="firstName"
-                      placeholder="John"
+                      type="tel"
+                      name="phone"
+                      id="hero-phone"
+                      placeholder="(323) 555-1234"
+                      required
                       className="w-full border-b border-gray-300 bg-transparent pb-2 text-gray-900 placeholder:text-gray-400 focus:border-gray-900 focus:outline-none"
                     />
                   </div>
-                  <div className="w-1/2">
+                  <div className="mb-5">
                     <label
-                      htmlFor="lastName"
+                      htmlFor="hero-email"
                       className="mb-2 block text-sm text-gray-600"
                     >
-                      Last Name*
+                      Email
                     </label>
                     <input
-                      type="text"
-                      name="lastName"
-                      placeholder="Smith"
+                      type="email"
+                      name="email"
+                      id="hero-email"
+                      placeholder="john@example.com"
                       className="w-full border-b border-gray-300 bg-transparent pb-2 text-gray-900 placeholder:text-gray-400 focus:border-gray-900 focus:outline-none"
                     />
                   </div>
-                </div>
-                <div className="mb-5">
-                  <label
-                    htmlFor="phone"
-                    className="mb-2 block text-sm text-gray-600"
+                  <div className="mb-6">
+                    <label
+                      htmlFor="hero-message"
+                      className="mb-2 block text-sm text-gray-600"
+                    >
+                      Describe Your Issue*
+                    </label>
+                    <textarea
+                      name="message"
+                      id="hero-message"
+                      rows={3}
+                      placeholder="Tell us about your plumbing issue..."
+                      required
+                      className="w-full resize-none border-b border-gray-300 bg-transparent pb-2 text-gray-900 placeholder:text-gray-400 focus:border-gray-900 focus:outline-none"
+                    ></textarea>
+                  </div>
+                  {status === "error" && (
+                    <p className="mb-3 text-sm text-red-600">
+                      Something went wrong. Please try again.
+                    </p>
+                  )}
+                  <button
+                    type="submit"
+                    disabled={status === "loading"}
+                    className="w-full rounded-lg bg-primary px-6 py-3 text-base font-bold text-white transition duration-300 ease-in-out hover:bg-primary/80 disabled:opacity-60"
                   >
-                    Phone*
-                  </label>
-                  <input
-                    type="tel"
-                    name="phone"
-                    placeholder="(323) 555-1234"
-                    className="w-full border-b border-gray-300 bg-transparent pb-2 text-gray-900 placeholder:text-gray-400 focus:border-gray-900 focus:outline-none"
-                  />
-                </div>
-                <div className="mb-5">
-                  <label
-                    htmlFor="email"
-                    className="mb-2 block text-sm text-gray-600"
-                  >
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    name="email"
-                    placeholder="john@example.com"
-                    className="w-full border-b border-gray-300 bg-transparent pb-2 text-gray-900 placeholder:text-gray-400 focus:border-gray-900 focus:outline-none"
-                  />
-                </div>
-                <div className="mb-6">
-                  <label
-                    htmlFor="message"
-                    className="mb-2 block text-sm text-gray-600"
-                  >
-                    Describe Your Issue*
-                  </label>
-                  <textarea
-                    name="message"
-                    rows={3}
-                    placeholder="Tell us about your plumbing issue..."
-                    className="w-full resize-none border-b border-gray-300 bg-transparent pb-2 text-gray-900 placeholder:text-gray-400 focus:border-gray-900 focus:outline-none"
-                  ></textarea>
-                </div>
-                <button
-                  type="submit"
-                    className="w-full rounded-lg bg-primary px-6 py-3 text-base font-bold text-white transition duration-300 ease-in-out hover:bg-primary/80"
-                >
-                  Send
-                </button>
-              </form>
+                    {status === "loading" ? "Sending..." : "Send"}
+                  </button>
+                </form>
+              )}
             </div>
           </div>
         </div>
