@@ -11,8 +11,6 @@ export const metadata: Metadata = {
 const ContactPage = () => {
   return (
     <>
-      <Breadcrumb pageName="Contact Us" pageDescription="Get in touch with A-1 Total Service Plumbing for a free estimate or 24/7 emergency service." />
-
       <Contact />
     </>
   );

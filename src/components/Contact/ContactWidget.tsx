@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, FormEvent, useEffect, useRef } from "react";
+import Image from "next/image";
 import submitContactForm from "@/utils/submitContactForm";
 
 export default function ContactWidget() {
@@ -43,11 +44,20 @@ export default function ContactWidget() {
   return (
     <div className="fixed bottom-8 right-8 z-[998] flex flex-col items-end" ref={panelRef}>
       {open && (
-        <div className="mb-4 w-[340px] rounded-lg bg-white px-6 py-6 shadow-xl dark:bg-dark-2 sm:w-[360px]">
+        <div className="mb-4 w-[340px] min-h-[560px] max-h-[80vh] overflow-y-auto rounded-lg bg-white px-6 py-6 shadow-xl dark:bg-dark-2 sm:w-[360px]">
           <div className="mb-4 flex items-center justify-between">
-            <h3 className="text-lg font-semibold text-dark dark:text-white">
-              Let us know if you have any questions!
-            </h3>
+            <div className="flex items-center gap-3">
+              <Image
+                src="/images/logo/logo.svg"
+                alt="Logo"
+                width={36}
+                height={36}
+                className="shrink-0"
+              />
+              <h3 className="text-lg font-semibold text-dark dark:text-white">
+                Let us know if you have any questions!
+              </h3>
+            </div>
             <button
               onClick={() => { setOpen(false); setStatus("idle"); }}
               className="text-body-color hover:text-dark dark:text-dark-6 dark:hover:text-white"
@@ -59,20 +69,35 @@ export default function ContactWidget() {
             </button>
           </div>
 
+          <div className="mb-5 flex gap-2.5">
+            <Image
+              src="/images/logo/logo.svg"
+              alt="Avatar"
+              width={32}
+              height={32}
+              className="h-8 w-8 shrink-0 rounded-full"
+            />
+            <div className="rounded-xl rounded-tl-none bg-gray-50 px-3.5 py-2.5 dark:bg-dark-3">
+              <p className="text-xs leading-relaxed text-body-color dark:text-dark-6">
+                This text goes straight to my personal phone. I will make sure to get back to you the second I&apos;m free!
+              </p>
+            </div>
+          </div>
+
           {status === "success" ? (
             <p className="py-6 text-center text-sm font-medium text-green-600">
               Thank you! We&apos;ll be in touch soon.
             </p>
           ) : (
             <form onSubmit={handleSubmit}>
-              <div className="mb-3 flex gap-3">
+              <div className="mb-5 flex gap-3">
                 <div className="w-1/2">
                   <input
                     type="text"
                     name="firstName"
                     placeholder="First Name*"
                     required
-                    className="w-full border-b border-[#f1f1f1] bg-transparent pb-2 text-sm text-dark placeholder:text-body-color/60 focus:border-primary focus:outline-none dark:border-dark-3 dark:text-white"
+                    className="w-full border-b border-[#f1f1f1] bg-transparent py-3 text-sm text-dark placeholder:text-body-color/60 focus:border-primary focus:outline-none dark:border-dark-3 dark:text-white"
                   />
                 </div>
                 <div className="w-1/2">
@@ -81,34 +106,34 @@ export default function ContactWidget() {
                     name="lastName"
                     placeholder="Last Name*"
                     required
-                    className="w-full border-b border-[#f1f1f1] bg-transparent pb-2 text-sm text-dark placeholder:text-body-color/60 focus:border-primary focus:outline-none dark:border-dark-3 dark:text-white"
+                    className="w-full border-b border-[#f1f1f1] bg-transparent py-3 text-sm text-dark placeholder:text-body-color/60 focus:border-primary focus:outline-none dark:border-dark-3 dark:text-white"
                   />
                 </div>
               </div>
-              <div className="mb-3">
+              <div className="mb-5">
                 <input
                   type="tel"
                   name="phone"
                   placeholder="Phone*"
                   required
-                  className="w-full border-b border-[#f1f1f1] bg-transparent pb-2 text-sm text-dark placeholder:text-body-color/60 focus:border-primary focus:outline-none dark:border-dark-3 dark:text-white"
+                  className="w-full border-b border-[#f1f1f1] bg-transparent py-3 text-sm text-dark placeholder:text-body-color/60 focus:border-primary focus:outline-none dark:border-dark-3 dark:text-white"
                 />
               </div>
-              <div className="mb-3">
+              <div className="mb-5">
                 <input
                   type="email"
                   name="email"
                   placeholder="Email"
-                  className="w-full border-b border-[#f1f1f1] bg-transparent pb-2 text-sm text-dark placeholder:text-body-color/60 focus:border-primary focus:outline-none dark:border-dark-3 dark:text-white"
+                  className="w-full border-b border-[#f1f1f1] bg-transparent py-3 text-sm text-dark placeholder:text-body-color/60 focus:border-primary focus:outline-none dark:border-dark-3 dark:text-white"
                 />
               </div>
-              <div className="mb-4">
+              <div className="mb-5">
                 <textarea
                   name="message"
-                  rows={2}
+                  rows={4}
                   placeholder="Describe your issue...*"
                   required
-                  className="w-full resize-none border-b border-[#f1f1f1] bg-transparent pb-2 text-sm text-dark placeholder:text-body-color/60 focus:border-primary focus:outline-none dark:border-dark-3 dark:text-white"
+                  className="w-full resize-none border-b border-[#f1f1f1] bg-transparent py-3 text-sm text-dark placeholder:text-body-color/60 focus:border-primary focus:outline-none dark:border-dark-3 dark:text-white"
                 ></textarea>
               </div>
               {status === "error" && (
