@@ -4,6 +4,7 @@ import HomeBlogSection from "@/components/Blog/HomeBlogSection";
 import CallToAction from "@/components/CallToAction";
 import Faq from "@/components/Faq";
 import Features from "@/components/Features";
+import GoogleReviews from "@/components/GoogleReviews";
 import Hero from "@/components/Hero";
 import OurServices from "@/components/OurServices";
 import Process from "@/components/Process";
@@ -37,11 +38,8 @@ export default function Home() {
       <Badges />
       <AboutUs />
       <OurServices />
-      <Features />
-      <Process />
-      <Testimonials />
+      <GoogleReviews />
       <Faq />
-      <HomeBlogSection posts={posts} />
       <CallToAction />
     </main>
   );
