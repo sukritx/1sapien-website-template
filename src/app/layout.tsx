@@ -1,6 +1,7 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import ScrollToTop from "@/components/ScrollToTop";
+import ContactWidget from "@/components/Contact/ContactWidget";
 import ScrollUp from "@/components/Common/ScrollUp";
 import "../styles/index.css";
 import "../styles/prism-vsc-dark-plus.css";
@@ -103,6 +104,7 @@ export default function RootLayout({
             {children}
 
             <Footer />
+            <ContactWidget />
             <ScrollToTop />
             <ScrollUp />
           </div>
