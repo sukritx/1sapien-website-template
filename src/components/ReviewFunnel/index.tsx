@@ -191,8 +191,18 @@ const HappyReview = ({ onBack }: { onBack: () => void }) => {
   );
 };
 
-const ReviewFunnel = () => {
+const ReviewFunnel = ({ contactId }: { contactId?: string | null }) => {
   const [mood, setMood] = useState<Mood>(null);
+
+  useEffect(() => {
+    if (contactId) {
+      fetch("/api/review/notify-visit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ contactId }),
+      }).catch(() => {});
+    }
+  }, [contactId]);
 
   return (
     <section className="min-h-[70vh] py-20 lg:py-28">
