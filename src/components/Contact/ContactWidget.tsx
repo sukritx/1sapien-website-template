@@ -69,19 +69,75 @@ export default function ContactWidget() {
             </button>
           </div>
 
-          <div className="mb-5 flex gap-2.5">
-            <Image
-              src="/images/logo/logo.svg"
-              alt="Avatar"
-              width={32}
-              height={32}
-              className="h-8 w-8 shrink-0 rounded-full"
-            />
-            <div className="rounded-xl rounded-tl-none bg-gray-50 px-3.5 py-2.5 dark:bg-dark-3">
-              <p className="text-xs leading-relaxed text-body-color dark:text-dark-6">
-                This text goes straight to my personal phone. I will make sure to get back to you the second I&apos;m free!
-              </p>
-            </div>
+          <div className="mb-4 border-t border-[#f1f1f1] dark:border-dark-3" />
+
+          <div className="mb-4">
+            <a
+              href="tel:3234102068"
+              className="flex items-center gap-2 text-sm font-medium text-dark transition hover:text-primary dark:text-white dark:hover:text-primary"
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.57.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1.02l-2.2 2.2z" />
+              </svg>
+              (323) 410-2068
+            </a>
+          </div>
+
+          <div className="mb-5 flex items-center gap-3">
+            <a
+              aria-label="Facebook"
+              href="https://www.facebook.com/a1totalserviceplumbing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-600 transition hover:text-primary dark:text-dark-6 dark:hover:text-primary"
+            >
+              <Image
+                src="/icons/facebook-color-svgrepo-com.svg"
+                alt="Facebook"
+                width={20}
+                height={20}
+                className="shrink-0"
+              />
+            </a>
+            <a
+              aria-label="Instagram"
+              href="https://www.instagram.com/a1totalserviceplumbing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-600 transition hover:text-primary dark:text-dark-6 dark:hover:text-primary"
+            >
+              <svg width="20" height="20" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" className="fill-current">
+                <path d="M11.0297 14.4305C12.9241 14.4305 14.4598 12.8948 14.4598 11.0004C14.4598 9.10602 12.9241 7.57031 11.0297 7.57031C9.13529 7.57031 7.59958 9.10602 7.59958 11.0004C7.59958 12.8948 9.13529 14.4305 11.0297 14.4305Z" />
+                <path d="M14.7554 1.8335H7.24463C4.25807 1.8335 1.83334 4.25823 1.83334 7.24479V14.6964C1.83334 17.7421 4.25807 20.1668 7.24463 20.1668H14.6962C17.7419 20.1668 20.1667 17.7421 20.1667 14.7555V7.24479C20.1667 4.25823 17.7419 1.8335 14.7554 1.8335ZM11.0296 15.4948C8.51614 15.4948 6.53496 13.4545 6.53496 11.0002C6.53496 8.54586 8.54571 6.50554 11.0296 6.50554C13.4839 6.50554 15.4946 8.54586 15.4946 11.0002C15.4946 13.4545 13.5134 15.4948 11.0296 15.4948ZM17.2393 6.91952C16.9436 7.24479 16.5 7.42221 15.9973 7.42221C15.5538 7.42221 15.1102 7.24479 14.7554 6.91952C14.4301 6.59425 14.2527 6.18027 14.2527 5.67758C14.2527 5.17489 14.4301 4.79049 14.7554 4.43565C15.0807 4.08081 15.4946 3.90339 15.9973 3.90339C16.4409 3.90339 16.914 4.08081 17.2393 4.40608C17.535 4.79049 17.7419 5.23403 17.7419 5.70715C17.7124 6.18027 17.535 6.59425 17.2393 6.91952Z" />
+                <path d="M16.0276 4.96777C15.6432 4.96777 15.318 5.29304 15.318 5.67745C15.318 6.06186 15.6432 6.38713 16.0276 6.38713C16.412 6.38713 16.7373 6.06186 16.7373 5.67745C16.7373 5.29304 16.4416 4.96777 16.0276 4.96777Z" />
+              </svg>
+            </a>
+            <a
+              aria-label="Line"
+              href="https://line.me/ti/p/~a1totalserviceplumbing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-600 transition hover:text-primary dark:text-dark-6 dark:hover:text-primary"
+            >
+              <Image
+                src="/icons/line-svgrepo-com.svg"
+                alt="LINE"
+                width={20}
+                height={20}
+                className="shrink-0"
+              />
+            </a>
+            <a
+              aria-label="Yelp"
+              href="https://www.yelp.com/biz/a-1-total-service-plumbing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-600 transition hover:text-primary dark:text-dark-6 dark:hover:text-primary"
+            >
+              <svg width="20" height="20" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" className="fill-current">
+                <path d="M18.8065 1.8335H3.16399C2.42474 1.8335 1.83334 2.42489 1.83334 3.16414V18.8362C1.83334 19.5459 2.42474 20.1668 3.16399 20.1668H18.7473C19.4866 20.1668 20.078 19.5754 20.078 18.8362V3.13457C20.1371 2.42489 19.5457 1.8335 18.8065 1.8335ZM7.24464 17.4168H4.55379V8.69371H7.24464V17.4168ZM5.88443 7.48135C4.99733 7.48135 4.31721 6.77167 4.31721 5.91414C4.31721 5.05661 5.0269 4.34694 5.88443 4.34694C6.74196 4.34694 7.45163 5.05661 7.45163 5.91414C7.45163 6.77167 6.8011 7.48135 5.88443 7.48135ZM17.4463 17.4168H14.7554V13.1883C14.7554 12.183 14.7258 10.8523 13.336 10.8523C11.9167 10.8523 11.7097 11.976 11.7097 13.0996V17.4168H9.01884V8.69371H11.6506V9.90608H11.6801C12.0645 9.1964 12.9221 8.48672 14.2527 8.48672C17.0027 8.48672 17.5054 10.2609 17.5054 12.6856V17.4168H17.4463Z" />
+              </svg>
+            </a>
           </div>
 
           {status === "success" ? (
