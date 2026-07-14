@@ -7,12 +7,14 @@ export const metadata: Metadata = {
     "Share your experience with A-1 Total Service Plumbing. Your feedback helps us improve our plumbing services.",
 };
 
-const ReviewPage = () => {
-  return (
-    <>
-      <ReviewFunnel />
-    </>
-  );
+type Props = {
+  searchParams: Promise<{ contact?: string }>;
+};
+
+const ReviewPage = async ({ searchParams }: Props) => {
+  const { contact } = await searchParams;
+
+  return <ReviewFunnel contactId={contact || null} />;
 };
 
 export default ReviewPage;
